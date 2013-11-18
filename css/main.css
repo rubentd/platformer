@@ -1,7 +1,49 @@
 #world{
 	width:750px;
-	height:500px;
+	height:300px;
 	border:1px solid;
 }
 
+#pika{
+	position:relative;
+	top:250px;
+	background-image: url('../img/pikachu-sprite.png');
+	background-repeat:no-repeat;
+	background-position: -7px 0;
+	width:40px;
+	height:50px;
+}
 
+#pika.walkLeft{
+	width:62px;
+	-moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -webkit-animation: walking .5s steps(4) infinite;
+       -moz-animation: walking .5s steps(4) infinite;
+        -ms-animation: walking .5s steps(4) infinite;
+         -o-animation: walking .5s steps(4) infinite;
+            animation: walking .5s steps(4) infinite;
+}
+
+#pika.walkRight{
+	width:62px;
+	-webkit-animation: walking .5s steps(4) infinite;
+       -moz-animation: walking .5s steps(4) infinite;
+        -ms-animation: walking .5s steps(4) infinite;
+         -o-animation: walking .5s steps(4) infinite;
+            animation: walking .5s steps(4) infinite;
+}
+
+@keyframes walking
+{
+	from { background-position: -6px -115px; }
+	  to { background-position: -242px -115px; }
+}
+
+@-webkit-keyframes walking
+{
+	from { background-position: -6px -115px; }
+	  to { background-position: -242px -115px; }
+}

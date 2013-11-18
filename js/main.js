@@ -1,7 +1,7 @@
 $(document).ready( function(){
 
 	var game = new Game({worldId : "world"});
-	var mainChar = new Pikachu({id : "pika", xPos : 0, });
+	var mainChar = new MainChar("pika");
 	game.setMainChar(mainChar);
 	game.start();
 
